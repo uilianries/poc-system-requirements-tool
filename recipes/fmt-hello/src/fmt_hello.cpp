@@ -6,7 +6,9 @@
 namespace consumer {
 
 void print_fmt_version() {
+    fmt::print("Hello, world!\n");
     std::cout << "fmt version: " << FMT_VERSION << std::endl;
+
 }
 
 }

@@ -4,7 +4,7 @@ from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 
 class json_consumerRecipe(ConanFile):
     name = "fmt-hello"
-    version = "0.3.0"
+    version = "0.2.0"
     package_type = "library"
     settings = "os", "arch", "build_type", "compiler"
     exports_sources = "CMakeLists.txt", "src/*"

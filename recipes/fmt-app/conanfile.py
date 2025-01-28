@@ -13,7 +13,7 @@ class fmt_appRecipe(ConanFile):
         cmake_layout(self)
 
     def requirements(self):
-        self.requires("fmt-hello/0.3.0")
+        self.requires("fmt-hello/0.2.0")
 
     def generate(self):
         deps = CMakeDeps(self)
