@@ -1,0 +1,1061 @@
++ CONAN_CONF_VERBOSE='-c tools.build:verbosity=verbose -c tools.compilation:verbosity=verbose'
++ CONAN_CONF_SYS_PKG='-c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True'
++ pushd recipes/libfmt/
+~/project/recipes/libfmt ~/project
++ conan create all/ --version=system -c tools.build:verbosity=verbose -c tools.compilation:verbosity=verbose -c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True
+
+======== Exporting recipe to the cache ========
+libfmt/system: Exporting package recipe: /home/conan/project/recipes/libfmt/all/conanfile.py
+libfmt/system: Copied 1 '.py' file: conanfile.py
+libfmt/system: Exported to cache folder: /home/conan/.conan2/p/libfm48cf0b50f4fca/e
+libfmt/system: Exported: libfmt/system#bb8d0a156e3eba57223814a05517ca88 (2025-01-28 15:39:33 UTC)
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+[conf]
+tools.build:verbosity=verbose
+tools.compilation:verbosity=verbose
+tools.system.package_manager:mode=install
+tools.system.package_manager:sudo=True
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    cli
+Requirements
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+libfmt/system: Forced build from source
+Requirements
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88:da39a3ee5e6b4b0d3255bfef95601890afd80709 - Build
+libfmt/system: System requirements:  already installed
+
+======== Installing packages ========
+
+-------- Installing package libfmt/system (1 of 1) --------
+libfmt/system: Building from source
+libfmt/system: Package libfmt/system:da39a3ee5e6b4b0d3255bfef95601890afd80709
+libfmt/system: Copying sources to build folder
+libfmt/system: Building your package in /home/conan/.conan2/p/b/libfmab187d52838d2/b
+libfmt/system: Generating aggregated env files
+libfmt/system: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+libfmt/system: Package 'da39a3ee5e6b4b0d3255bfef95601890afd80709' built
+libfmt/system: Build folder /home/conan/.conan2/p/b/libfmab187d52838d2/b
+libfmt/system: Generating the package
+libfmt/system: Packaging in folder /home/conan/.conan2/p/b/libfmab187d52838d2/p
+libfmt/system: package(): WARN: No files in this package!
+libfmt/system: Created package revision 0ba8627bd47edc3a501e8f0eb9a79e5e
+libfmt/system: Package 'da39a3ee5e6b4b0d3255bfef95601890afd80709' created
+libfmt/system: Full package reference: libfmt/system#bb8d0a156e3eba57223814a05517ca88:da39a3ee5e6b4b0d3255bfef95601890afd80709#0ba8627bd47edc3a501e8f0eb9a79e5e
+libfmt/system: Package folder /home/conan/.conan2/p/b/libfma923fc536c4d6/p
+
+======== Launching test_package ========
+
+======== Computing dependency graph ========
+Graph root
+    libfmt/system (test package): /home/conan/project/recipes/libfmt/all/test_package/conanfile.py
+Requirements
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+Requirements
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88:da39a3ee5e6b4b0d3255bfef95601890afd80709#0ba8627bd47edc3a501e8f0eb9a79e5e - Cache
+libfmt/system: System requirements:  already installed
+
+======== Installing packages ========
+libfmt/system: Already installed! (1 of 1)
+
+======== Testing the package ========
+Removing previously existing 'test_package' build folder: /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release
+libfmt/system (test package): Test package build: build/gcc-13-x86_64-gnu17-release
+libfmt/system (test package): Test package build folder: /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release
+libfmt/system (test package): Writing generators to /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release/generators
+libfmt/system (test package): Generator 'CMakeDeps' calling 'generate()'
+libfmt/system (test package): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(libfmt)
+    target_link_libraries(... libfmt::libfmt)
+libfmt/system (test package): Generator 'CMakeToolchain' calling 'generate()'
+libfmt/system (test package): CMakeToolchain generated: conan_toolchain.cmake
+libfmt/system (test package): CMakeToolchain generated: /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release/generators/CMakePresets.json
+libfmt/system (test package): CMakeToolchain generated: /home/conan/project/recipes/libfmt/all/test_package/CMakeUserPresets.json
+libfmt/system (test package): Generator 'VirtualRunEnv' calling 'generate()'
+libfmt/system (test package): Generating aggregated env files
+libfmt/system (test package): Generated aggregated env files: ['conanrun.sh', 'conanbuild.sh']
+
+======== Testing the package: Building ========
+libfmt/system (test package): Calling build()
+libfmt/system (test package): Running CMake.configure()
+libfmt/system (test package): RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/conan/project/recipes/libfmt/all/test_package" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" "/home/conan/project/recipes/libfmt/all/test_package" --loglevel=VERBOSE
+-- Using Conan toolchain: /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release/generators/conan_toolchain.cmake
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions ON
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (1.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release
+
+libfmt/system (test package): Running CMake.build()
+libfmt/system (test package): RUN: cmake --build "/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release" --verbose -- -j2
+Change Dir: '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2
+gmake: Warning: File 'Makefile' has modification time 0.49 s in the future
+/usr/bin/cmake -S/home/conan/project/recipes/libfmt/all/test_package -B/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release/CMakeFiles /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+gmake[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 0.33 s in the future
+/usr/bin/gmake  -f CMakeFiles/test_package.dir/build.make CMakeFiles/test_package.dir/depend
+gmake[2]: Entering directory '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+gmake[2]: Warning: File 'CMakeFiles/test_package.dir/flags.make' has modification time 0.29 s in the future
+cd /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/conan/project/recipes/libfmt/all/test_package /home/conan/project/recipes/libfmt/all/test_package /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release/CMakeFiles/test_package.dir/DependInfo.cmake "--color="
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Leaving directory '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+/usr/bin/gmake  -f CMakeFiles/test_package.dir/build.make CMakeFiles/test_package.dir/build
+gmake[2]: Entering directory '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+gmake[2]: Warning: File 'CMakeFiles/test_package.dir/flags.make' has modification time 0.17 s in the future
+[ 50%] Building CXX object CMakeFiles/test_package.dir/test_package.cpp.o
+/usr/bin/c++ -DFMT_SHARED  -m64 -O3 -DNDEBUG -std=gnu++17 -MD -MT CMakeFiles/test_package.dir/test_package.cpp.o -MF CMakeFiles/test_package.dir/test_package.cpp.o.d -o CMakeFiles/test_package.dir/test_package.cpp.o -c /home/conan/project/recipes/libfmt/all/test_package/test_package.cpp
+[100%] Linking CXX executable test_package
+/usr/bin/cmake -E cmake_link_script CMakeFiles/test_package.dir/link.txt --verbose=1
+/usr/bin/c++ -m64 -O3 -DNDEBUG -m64 CMakeFiles/test_package.dir/test_package.cpp.o -o test_package  /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Leaving directory '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+[100%] Built target test_package
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release'
+/usr/bin/cmake -E cmake_progress_start /home/conan/project/recipes/libfmt/all/test_package/build/gcc-13-x86_64-gnu17-release/CMakeFiles 0
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+======== Testing the package: Executing test ========
+libfmt/system (test package): Running test()
+libfmt/system (test package): RUN: ./test_package
+Hello, world!
+
++ popd
+~/project
++ pushd recipes/fmt-hello/
+~/project/recipes/fmt-hello ~/project
++ conan create ./ -c tools.build:verbosity=verbose -c tools.compilation:verbosity=verbose -c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True
+
+======== Exporting recipe to the cache ========
+fmt-hello/0.2.0: Exporting package recipe: /home/conan/project/recipes/fmt-hello/conanfile.py
+fmt-hello/0.2.0: Copied 1 '.py' file: conanfile.py
+fmt-hello/0.2.0: Copied 1 '.txt' file: CMakeLists.txt
+fmt-hello/0.2.0: Copied 1 '.cpp' file: fmt_hello.cpp
+fmt-hello/0.2.0: Copied 1 '.h' file: fmt_hello.h
+fmt-hello/0.2.0: Exported to cache folder: /home/conan/.conan2/p/fmt-h979217ed617e7/e
+fmt-hello/0.2.0: Exported: fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041 (2025-01-28 15:39:37 UTC)
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+[conf]
+tools.build:verbosity=verbose
+tools.compilation:verbosity=verbose
+tools.system.package_manager:mode=install
+tools.system.package_manager:sudo=True
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    cli
+Requirements
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041 - Cache
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+fmt-hello/0.2.0: Forced build from source
+Requirements
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041:4027cb2b73d73f446d3a2e4f5fae41511962647e - Build
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88:da39a3ee5e6b4b0d3255bfef95601890afd80709#0ba8627bd47edc3a501e8f0eb9a79e5e - Cache
+libfmt/system: System requirements:  already installed
+
+======== Installing packages ========
+libfmt/system: Already installed! (1 of 2)
+
+-------- Installing package fmt-hello/0.2.0 (2 of 2) --------
+fmt-hello/0.2.0: Building from source
+fmt-hello/0.2.0: Package fmt-hello/0.2.0:4027cb2b73d73f446d3a2e4f5fae41511962647e
+fmt-hello/0.2.0: Copying sources to build folder
+fmt-hello/0.2.0: Building your package in /home/conan/.conan2/p/b/fmt-hdcae79431f058/b
+fmt-hello/0.2.0: Calling generate()
+fmt-hello/0.2.0: Generators folder: /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release/generators
+fmt-hello/0.2.0: CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(libfmt)
+    target_link_libraries(... libfmt::libfmt)
+fmt-hello/0.2.0: CMakeToolchain generated: conan_toolchain.cmake
+fmt-hello/0.2.0: CMakeToolchain generated: /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release/generators/CMakePresets.json
+fmt-hello/0.2.0: CMakeToolchain generated: /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/CMakeUserPresets.json
+fmt-hello/0.2.0: Generating aggregated env files
+fmt-hello/0.2.0: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+fmt-hello/0.2.0: Calling build()
+fmt-hello/0.2.0: Running CMake.configure()
+fmt-hello/0.2.0: RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/conan/.conan2/p/b/fmt-hdcae79431f058/p" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" "/home/conan/.conan2/p/b/fmt-hdcae79431f058/b" --loglevel=VERBOSE
+-- Using Conan toolchain: /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release/generators/conan_toolchain.cmake
+-- Conan toolchain: Setting CMAKE_POSITION_INDEPENDENT_CODE=ON (options.fPIC)
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions ON
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (1.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release
+
+fmt-hello/0.2.0: Running CMake.build()
+fmt-hello/0.2.0: RUN: cmake --build "/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release" --verbose -- -j2
+Change Dir: '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2
+/usr/bin/cmake -S/home/conan/.conan2/p/b/fmt-hdcae79431f058/b -B/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release/CMakeFiles /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+/usr/bin/gmake  -f CMakeFiles/fmt_hello.dir/build.make CMakeFiles/fmt_hello.dir/depend
+gmake[2]: Entering directory '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+cd /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/conan/.conan2/p/b/fmt-hdcae79431f058/b /home/conan/.conan2/p/b/fmt-hdcae79431f058/b /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release/CMakeFiles/fmt_hello.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+/usr/bin/gmake  -f CMakeFiles/fmt_hello.dir/build.make CMakeFiles/fmt_hello.dir/build
+gmake[2]: Entering directory '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+[ 50%] Building CXX object CMakeFiles/fmt_hello.dir/src/fmt_hello.cpp.o
+/usr/bin/c++ -DFMT_SHARED  -m64 -O3 -DNDEBUG -std=gnu++17 -fPIC -MD -MT CMakeFiles/fmt_hello.dir/src/fmt_hello.cpp.o -MF CMakeFiles/fmt_hello.dir/src/fmt_hello.cpp.o.d -o CMakeFiles/fmt_hello.dir/src/fmt_hello.cpp.o -c /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/src/fmt_hello.cpp
+[100%] Linking CXX static library libfmt_hello.a
+/usr/bin/cmake -P CMakeFiles/fmt_hello.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/fmt_hello.dir/link.txt --verbose=1
+/usr/bin/ar qc libfmt_hello.a CMakeFiles/fmt_hello.dir/src/fmt_hello.cpp.o
+/usr/bin/ranlib libfmt_hello.a
+gmake[2]: Leaving directory '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+[100%] Built target fmt_hello
+gmake[1]: Leaving directory '/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release'
+/usr/bin/cmake -E cmake_progress_start /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release/CMakeFiles 0
+
+
+fmt-hello/0.2.0: Package '4027cb2b73d73f446d3a2e4f5fae41511962647e' built
+fmt-hello/0.2.0: Build folder /home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release
+fmt-hello/0.2.0: Generating the package
+fmt-hello/0.2.0: Packaging in folder /home/conan/.conan2/p/b/fmt-hdcae79431f058/p
+fmt-hello/0.2.0: Calling package()
+fmt-hello/0.2.0: Running CMake.install()
+fmt-hello/0.2.0: RUN: cmake --install "/home/conan/.conan2/p/b/fmt-hdcae79431f058/b/build/Release" --prefix "/home/conan/.conan2/p/b/fmt-hdcae79431f058/p" --verbose
+-- Install configuration: "Release"
+-- Installing: /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+-- Installing: /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/include/fmt_hello.h
+
+fmt-hello/0.2.0: package(): Packaged 1 '.h' file: fmt_hello.h
+fmt-hello/0.2.0: package(): Packaged 1 '.a' file: libfmt_hello.a
+fmt-hello/0.2.0: Created package revision 678975cddad237b8a478b037696196c0
+fmt-hello/0.2.0: Package '4027cb2b73d73f446d3a2e4f5fae41511962647e' created
+fmt-hello/0.2.0: Full package reference: fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041:4027cb2b73d73f446d3a2e4f5fae41511962647e#678975cddad237b8a478b037696196c0
+fmt-hello/0.2.0: Package folder /home/conan/.conan2/p/b/fmt-hdcae79431f058/p
+
+======== Launching test_package ========
+
+======== Computing dependency graph ========
+Graph root
+    fmt-hello/0.2.0 (test package): /home/conan/project/recipes/fmt-hello/test_package/conanfile.py
+Requirements
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041 - Cache
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+Requirements
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041:4027cb2b73d73f446d3a2e4f5fae41511962647e#678975cddad237b8a478b037696196c0 - Cache
+Skipped binaries
+    libfmt/system
+
+======== Installing packages ========
+fmt-hello/0.2.0: Already installed! (1 of 1)
+
+======== Testing the package ========
+Removing previously existing 'test_package' build folder: /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release
+fmt-hello/0.2.0 (test package): Test package build: build/gcc-13-x86_64-gnu17-release
+fmt-hello/0.2.0 (test package): Test package build folder: /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release
+fmt-hello/0.2.0 (test package): Writing generators to /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release/generators
+fmt-hello/0.2.0 (test package): Generator 'CMakeToolchain' calling 'generate()'
+fmt-hello/0.2.0 (test package): CMakeToolchain generated: conan_toolchain.cmake
+fmt-hello/0.2.0 (test package): CMakeToolchain generated: /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release/generators/CMakePresets.json
+fmt-hello/0.2.0 (test package): CMakeToolchain generated: /home/conan/project/recipes/fmt-hello/test_package/CMakeUserPresets.json
+fmt-hello/0.2.0 (test package): Generator 'CMakeDeps' calling 'generate()'
+fmt-hello/0.2.0 (test package): CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(fmt-hello)
+    target_link_libraries(... fmt-hello::fmt-hello)
+fmt-hello/0.2.0 (test package): Generating aggregated env files
+fmt-hello/0.2.0 (test package): Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+
+======== Testing the package: Building ========
+fmt-hello/0.2.0 (test package): Calling build()
+fmt-hello/0.2.0 (test package): Running CMake.configure()
+fmt-hello/0.2.0 (test package): RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/conan/project/recipes/fmt-hello/test_package" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" "/home/conan/project/recipes/fmt-hello/test_package" --loglevel=VERBOSE
+-- Using Conan toolchain: /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release/generators/conan_toolchain.cmake
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions ON
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Conan: Target declared 'fmt-hello::fmt-hello'
+-- Conan: Library fmt_hello found /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+-- Conan: Found: /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+-- Configuring done (1.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release
+
+fmt-hello/0.2.0 (test package): Running CMake.build()
+fmt-hello/0.2.0 (test package): RUN: cmake --build "/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release" --verbose -- -j2
+Change Dir: '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2
+gmake: Warning: File 'Makefile' has modification time 0.49 s in the future
+/usr/bin/cmake -S/home/conan/project/recipes/fmt-hello/test_package -B/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release/CMakeFiles /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+gmake[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 0.33 s in the future
+/usr/bin/gmake  -f CMakeFiles/test_package.dir/build.make CMakeFiles/test_package.dir/depend
+gmake[2]: Entering directory '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+gmake[2]: Warning: File 'CMakeFiles/test_package.dir/flags.make' has modification time 0.29 s in the future
+cd /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/conan/project/recipes/fmt-hello/test_package /home/conan/project/recipes/fmt-hello/test_package /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release/CMakeFiles/test_package.dir/DependInfo.cmake "--color="
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Leaving directory '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+/usr/bin/gmake  -f CMakeFiles/test_package.dir/build.make CMakeFiles/test_package.dir/build
+gmake[2]: Entering directory '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+gmake[2]: Warning: File 'CMakeFiles/test_package.dir/flags.make' has modification time 0.18 s in the future
+[ 50%] Building CXX object CMakeFiles/test_package.dir/test_package.cpp.o
+/usr/bin/c++  -isystem /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/include -m64 -O3 -DNDEBUG -std=gnu++17 -MD -MT CMakeFiles/test_package.dir/test_package.cpp.o -MF CMakeFiles/test_package.dir/test_package.cpp.o.d -o CMakeFiles/test_package.dir/test_package.cpp.o -c /home/conan/project/recipes/fmt-hello/test_package/test_package.cpp
+[100%] Linking CXX executable test_package
+/usr/bin/cmake -E cmake_link_script CMakeFiles/test_package.dir/link.txt --verbose=1
+/usr/bin/c++ -m64 -O3 -DNDEBUG -m64 CMakeFiles/test_package.dir/test_package.cpp.o -o test_package   -L/home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib  -Wl,-rpath,/home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Leaving directory '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+[100%] Built target test_package
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release'
+/usr/bin/cmake -E cmake_progress_start /home/conan/project/recipes/fmt-hello/test_package/build/gcc-13-x86_64-gnu17-release/CMakeFiles 0
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+======== Testing the package: Executing test ========
+fmt-hello/0.2.0 (test package): Running test()
+fmt-hello/0.2.0 (test package): RUN: ./test_package
+fmt version: 90100
+
++ popd
+~/project
++ pushd recipes/fmt-app/
+~/project/recipes/fmt-app ~/project
++ conan create ./ -c tools.build:verbosity=verbose -c tools.compilation:verbosity=verbose -c tools.system.package_manager:mode=install -c tools.system.package_manager:sudo=True
+
+======== Exporting recipe to the cache ========
+fmt-app/0.2.0: Exporting package recipe: /home/conan/project/recipes/fmt-app/conanfile.py
+fmt-app/0.2.0: Copied 1 '.py' file: conanfile.py
+fmt-app/0.2.0: Copied 1 '.txt' file: CMakeLists.txt
+fmt-app/0.2.0: Copied 1 '.cpp' file: main.cpp
+fmt-app/0.2.0: Exported to cache folder: /home/conan/.conan2/p/fmt-acf5b84e4939da/e
+fmt-app/0.2.0: Exported: fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0 (2025-01-28 15:39:44 UTC)
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+[conf]
+tools.build:verbosity=verbose
+tools.compilation:verbosity=verbose
+tools.system.package_manager:mode=install
+tools.system.package_manager:sudo=True
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    cli
+Requirements
+    fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0 - Cache
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041 - Cache
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+fmt-app/0.2.0: Forced build from source
+Requirements
+    fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0:e687807b56adaef391047dbf700360881557202f - Build
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041:4027cb2b73d73f446d3a2e4f5fae41511962647e#678975cddad237b8a478b037696196c0 - Cache
+Skipped binaries
+    libfmt/system
+
+======== Installing packages ========
+fmt-hello/0.2.0: Already installed! (1 of 2)
+
+-------- Installing package fmt-app/0.2.0 (2 of 2) --------
+fmt-app/0.2.0: Building from source
+fmt-app/0.2.0: Package fmt-app/0.2.0:e687807b56adaef391047dbf700360881557202f
+fmt-app/0.2.0: Copying sources to build folder
+fmt-app/0.2.0: Building your package in /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b
+fmt-app/0.2.0: Calling generate()
+fmt-app/0.2.0: Generators folder: /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release/generators
+fmt-app/0.2.0: CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(fmt-hello)
+    target_link_libraries(... fmt-hello::fmt-hello)
+fmt-app/0.2.0: CMakeToolchain generated: conan_toolchain.cmake
+fmt-app/0.2.0: CMakeToolchain generated: /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release/generators/CMakePresets.json
+fmt-app/0.2.0: CMakeToolchain generated: /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/CMakeUserPresets.json
+fmt-app/0.2.0: Generating aggregated env files
+fmt-app/0.2.0: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+fmt-app/0.2.0: Calling build()
+fmt-app/0.2.0: Running CMake.configure()
+fmt-app/0.2.0: RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/p" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" "/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b" --loglevel=VERBOSE
+-- Using Conan toolchain: /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release/generators/conan_toolchain.cmake
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions ON
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Conan: Target declared 'fmt-hello::fmt-hello'
+-- Conan: Library fmt_hello found /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+-- Conan: Found: /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+-- Configuring done (1.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release
+
+fmt-app/0.2.0: Running CMake.build()
+fmt-app/0.2.0: RUN: cmake --build "/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release" --verbose -- -j2
+Change Dir: '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2
+/usr/bin/cmake -S/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b -B/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release/CMakeFiles /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+/usr/bin/gmake  -f CMakeFiles/fmt-app.dir/build.make CMakeFiles/fmt-app.dir/depend
+gmake[2]: Entering directory '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+cd /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release/CMakeFiles/fmt-app.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+/usr/bin/gmake  -f CMakeFiles/fmt-app.dir/build.make CMakeFiles/fmt-app.dir/build
+gmake[2]: Entering directory '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+[ 50%] Building CXX object CMakeFiles/fmt-app.dir/src/main.cpp.o
+/usr/bin/c++  -isystem /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/include -m64 -O3 -DNDEBUG -std=gnu++17 -MD -MT CMakeFiles/fmt-app.dir/src/main.cpp.o -MF CMakeFiles/fmt-app.dir/src/main.cpp.o.d -o CMakeFiles/fmt-app.dir/src/main.cpp.o -c /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/src/main.cpp
+[100%] Linking CXX executable fmt-app
+/usr/bin/cmake -E cmake_link_script CMakeFiles/fmt-app.dir/link.txt --verbose=1
+/usr/bin/c++ -m64 -O3 -DNDEBUG -m64 "CMakeFiles/fmt-app.dir/src/main.cpp.o" -o fmt-app   -L/home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib  -Wl,-rpath,/home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib: /home/conan/.conan2/p/b/fmt-hdcae79431f058/p/lib/libfmt_hello.a
+gmake[2]: Leaving directory '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+[100%] Built target fmt-app
+gmake[1]: Leaving directory '/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release'
+/usr/bin/cmake -E cmake_progress_start /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release/CMakeFiles 0
+
+
+fmt-app/0.2.0: Package 'e687807b56adaef391047dbf700360881557202f' built
+fmt-app/0.2.0: Build folder /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release
+fmt-app/0.2.0: Generating the package
+fmt-app/0.2.0: Packaging in folder /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/p
+fmt-app/0.2.0: Calling package()
+fmt-app/0.2.0: Running CMake.install()
+fmt-app/0.2.0: RUN: cmake --install "/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/b/build/Release" --prefix "/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/p" --verbose
+-- Install configuration: "Release"
+-- Installing: /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/p/bin/fmt-app
+-- Set non-toolchain portion of runtime path of "/home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/p/bin/fmt-app" to ""
+
+fmt-app/0.2.0: package(): Packaged 1 file: fmt-app
+fmt-app/0.2.0: Created package revision 5d6d1483105b9a006b292cfc0fd014a2
+fmt-app/0.2.0: Package 'e687807b56adaef391047dbf700360881557202f' created
+fmt-app/0.2.0: Full package reference: fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0:e687807b56adaef391047dbf700360881557202f#5d6d1483105b9a006b292cfc0fd014a2
+fmt-app/0.2.0: Package folder /home/conan/.conan2/p/b/fmt-a04542ad2eb0b4/p
+
+======== Launching test_package ========
+
+======== Computing dependency graph ========
+Graph root
+    fmt-app/0.2.0 (test package): /home/conan/project/recipes/fmt-app/test_package/conanfile.py
+Requirements
+    fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0 - Cache
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041 - Cache
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+Requirements
+    fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0:e687807b56adaef391047dbf700360881557202f#5d6d1483105b9a006b292cfc0fd014a2 - Cache
+Skipped binaries
+    fmt-hello/0.2.0, libfmt/system
+
+======== Installing packages ========
+fmt-app/0.2.0: Already installed! (1 of 1)
+
+======== Testing the package ========
+fmt-app/0.2.0 (test package): Test package build:
+fmt-app/0.2.0 (test package): Test package build folder: /home/conan/project/recipes/fmt-app/test_package
+fmt-app/0.2.0 (test package): Generating aggregated env files
+fmt-app/0.2.0 (test package): Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+
+======== Testing the package: Building ========
+
+======== Testing the package: Executing test ========
+fmt-app/0.2.0 (test package): Running test()
+fmt-app/0.2.0 (test package): RUN: fmt-app
+fmt version: 90100
+
++ popd
+~/project
+
+
+conan graph info --requires=fmt-app/0.2.0
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    cli
+Requirements
+    fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0 - Cache
+    fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041 - Cache
+    libfmt/system#bb8d0a156e3eba57223814a05517ca88 - Cache
+
+======== Computing necessary packages ========
+Requirements
+    fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0:e687807b56adaef391047dbf700360881557202f#5d6d1483105b9a006b292cfc0fd014a2 - Cache
+Skipped binaries
+    fmt-hello/0.2.0, libfmt/system
+
+-------- Basic graph information --------
+conanfile:
+  ref: conanfile
+  id: 0
+  recipe: Cli
+  package_id: None
+  prev: None
+  rrev: None
+  rrev_timestamp: None
+  prev_timestamp: None
+  remote: None
+  binary_remote: None
+  build_id: None
+  binary: None
+  invalid_build: False
+  info_invalid: None
+  name: None
+  user: None
+  channel: None
+  url: None
+  license: None
+  author: None
+  description: None
+  homepage: None
+  build_policy: None
+  upload_policy: None
+  revision_mode: hash
+  provides: None
+  deprecated: None
+  win_bash: None
+  win_bash_run: None
+  default_options: None
+  options_description: None
+  version: None
+  topics: None
+  package_type: unknown
+  languages: []
+  settings:
+    os: Linux
+    arch: x86_64
+    compiler: gcc
+    compiler.cppstd: gnu17
+    compiler.libcxx: libstdc++11
+    compiler.version: 13
+    build_type: Release
+  options:
+  options_definitions:
+  generators: []
+  python_requires: None
+  system_requires:
+  recipe_folder: None
+  source_folder: None
+  build_folder: None
+  generators_folder: None
+  package_folder: None
+  immutable_package_folder: None
+  cpp_info:
+    root:
+      includedirs: ['include']
+      srcdirs: None
+      libdirs: ['lib']
+      resdirs: None
+      bindirs: ['bin']
+      builddirs: None
+      frameworkdirs: None
+      system_libs: None
+      frameworks: None
+      libs: None
+      defines: None
+      cflags: None
+      cxxflags: None
+      sharedlinkflags: None
+      exelinkflags: None
+      objects: None
+      sysroot: None
+      requires: None
+      properties: None
+      exe: None
+      type: None
+      location: None
+      link_location: None
+      languages: None
+  conf_info:
+  label: cli
+  vendor: False
+  dependencies:
+    1:
+      ref: fmt-app/0.2.0
+      run: True
+      libs: False
+      skip: False
+      test: False
+      force: False
+      direct: True
+      build: False
+      transitive_headers: None
+      transitive_libs: None
+      headers: False
+      package_id_mode: None
+      visible: True
+    2:
+      ref: fmt-hello/0.2.0
+      run: False
+      libs: False
+      skip: True
+      test: False
+      force: False
+      direct: False
+      build: False
+      transitive_headers: None
+      transitive_libs: None
+      headers: False
+      package_id_mode: None
+      visible: True
+    3:
+      ref: libfmt/system
+      run: False
+      libs: False
+      skip: True
+      test: False
+      force: False
+      direct: False
+      build: False
+      transitive_headers: None
+      transitive_libs: None
+      headers: False
+      package_id_mode: None
+      visible: True
+  context: host
+  test: False
+fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0:
+  ref: fmt-app/0.2.0#c63ea2053c01bb52f8fbf75f9a63edd0
+  id: 1
+  recipe: Cache
+  package_id: e687807b56adaef391047dbf700360881557202f
+  prev: 5d6d1483105b9a006b292cfc0fd014a2
+  rrev: c63ea2053c01bb52f8fbf75f9a63edd0
+  rrev_timestamp: 1738078784.6653671
+  prev_timestamp: 1738078787.5264156
+  remote: None
+  binary_remote: None
+  build_id: None
+  binary: Cache
+  invalid_build: False
+  info_invalid: None
+  name: fmt-app
+  user: None
+  channel: None
+  url: None
+  license: None
+  author: None
+  description: None
+  homepage: None
+  build_policy: None
+  upload_policy: None
+  revision_mode: hash
+  provides: None
+  deprecated: None
+  win_bash: None
+  win_bash_run: None
+  default_options: None
+  options_description: None
+  version: 0.2.0
+  topics: None
+  package_type: application
+  languages: []
+  settings:
+    os: Linux
+    arch: x86_64
+    compiler: gcc
+    compiler.cppstd: gnu17
+    compiler.libcxx: libstdc++11
+    compiler.version: 13
+    build_type: Release
+  options:
+  options_definitions:
+  generators: []
+  python_requires: None
+  system_requires:
+  recipe_folder: /home/conan/.conan2/p/fmt-acf5b84e4939da/e
+  source_folder: None
+  build_folder: None
+  generators_folder: None
+  package_folder: None
+  immutable_package_folder: None
+  cpp_info:
+    root:
+      includedirs: ['include']
+      srcdirs: None
+      libdirs: ['lib']
+      resdirs: None
+      bindirs: ['bin']
+      builddirs: None
+      frameworkdirs: None
+      system_libs: None
+      frameworks: None
+      libs: None
+      defines: None
+      cflags: None
+      cxxflags: None
+      sharedlinkflags: None
+      exelinkflags: None
+      objects: None
+      sysroot: None
+      requires: None
+      properties: None
+      exe: None
+      type: None
+      location: None
+      link_location: None
+      languages: None
+  conf_info:
+  label: fmt-app/0.2.0
+  info:
+    settings:
+      os: Linux
+      arch: x86_64
+      compiler: gcc
+      compiler.cppstd: gnu17
+      compiler.libcxx: libstdc++11
+      compiler.version: 13
+      build_type: Release
+    requires: ['fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041:4027cb2b73d73f446d3a2e4f5fae41511962647e']
+  vendor: False
+  dependencies:
+    2:
+      ref: fmt-hello/0.2.0
+      run: False
+      libs: True
+      skip: False
+      test: False
+      force: False
+      direct: True
+      build: False
+      transitive_headers: None
+      transitive_libs: None
+      headers: True
+      package_id_mode: full_mode
+      visible: True
+    3:
+      ref: libfmt/system
+      run: False
+      libs: False
+      skip: False
+      test: False
+      force: False
+      direct: False
+      build: False
+      transitive_headers: None
+      transitive_libs: None
+      headers: False
+      package_id_mode: None
+      visible: True
+  context: host
+  test: False
+fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041:
+  ref: fmt-hello/0.2.0#e191c69a5f7e7a7b2b5cff7ef85a2041
+  id: 2
+  recipe: Cache
+  package_id: 4027cb2b73d73f446d3a2e4f5fae41511962647e
+  prev: 678975cddad237b8a478b037696196c0
+  rrev: e191c69a5f7e7a7b2b5cff7ef85a2041
+  rrev_timestamp: 1738078777.6299481
+  prev_timestamp: 1738078781.2292142
+  remote: None
+  binary_remote: None
+  build_id: None
+  binary: Skip
+  invalid_build: False
+  info_invalid: None
+  name: fmt-hello
+  user: None
+  channel: None
+  url: None
+  license: None
+  author: None
+  description: None
+  homepage: None
+  build_policy: None
+  upload_policy: None
+  revision_mode: hash
+  provides: None
+  deprecated: None
+  win_bash: None
+  win_bash_run: None
+  default_options:
+    shared: False
+    fPIC: True
+  options_description: None
+  version: 0.2.0
+  topics: None
+  package_type: static-library
+  languages: []
+  settings:
+    os: Linux
+    arch: x86_64
+    compiler: gcc
+    compiler.cppstd: gnu17
+    compiler.libcxx: libstdc++11
+    compiler.version: 13
+    build_type: Release
+  options:
+    fPIC: True
+    shared: False
+  options_definitions:
+    shared: ['True', 'False']
+    fPIC: ['True', 'False']
+  generators: []
+  python_requires: None
+  system_requires:
+  recipe_folder: /home/conan/.conan2/p/fmt-h979217ed617e7/e
+  source_folder: None
+  build_folder: None
+  generators_folder: None
+  package_folder: None
+  immutable_package_folder: None
+  cpp_info:
+    root:
+      includedirs: ['include']
+      srcdirs: None
+      libdirs: ['lib']
+      resdirs: None
+      bindirs: ['bin']
+      builddirs: None
+      frameworkdirs: None
+      system_libs: None
+      frameworks: None
+      libs: None
+      defines: None
+      cflags: None
+      cxxflags: None
+      sharedlinkflags: None
+      exelinkflags: None
+      objects: None
+      sysroot: None
+      requires: None
+      properties: None
+      exe: None
+      type: None
+      location: None
+      link_location: None
+      languages: None
+  conf_info:
+  label: fmt-hello/0.2.0
+  info:
+    settings:
+      os: Linux
+      arch: x86_64
+      compiler: gcc
+      compiler.cppstd: gnu17
+      compiler.libcxx: libstdc++11
+      compiler.version: 13
+      build_type: Release
+    options:
+      fPIC: True
+      shared: False
+    requires: ['libfmt/system#bb8d0a156e3eba57223814a05517ca88:da39a3ee5e6b4b0d3255bfef95601890afd80709']
+  vendor: False
+  dependencies:
+    3:
+      ref: libfmt/system
+      run: False
+      libs: False
+      skip: False
+      test: False
+      force: False
+      direct: True
+      build: False
+      transitive_headers: None
+      transitive_libs: None
+      headers: True
+      package_id_mode: full_mode
+      visible: True
+  context: host
+  test: False
+libfmt/system#bb8d0a156e3eba57223814a05517ca88:
+  ref: libfmt/system#bb8d0a156e3eba57223814a05517ca88
+  id: 3
+  recipe: Cache
+  package_id: da39a3ee5e6b4b0d3255bfef95601890afd80709
+  prev: 0ba8627bd47edc3a501e8f0eb9a79e5e
+  rrev: bb8d0a156e3eba57223814a05517ca88
+  rrev_timestamp: 1738078773.0776374
+  prev_timestamp: 1738078773.1718276
+  remote: None
+  binary_remote: None
+  build_id: None
+  binary: Skip
+  invalid_build: False
+  info_invalid: None
+  name: libfmt
+  user: None
+  channel: None
+  url: None
+  license: MIT
+  author: None
+  description: fast type-safe C++ formatting library
+  homepage: https://fmt.dev/
+  build_policy: None
+  upload_policy: None
+  revision_mode: hash
+  provides: None
+  deprecated: None
+  win_bash: None
+  win_bash_run: None
+  default_options: None
+  options_description: None
+  version: system
+  topics: ['string', 'formatter']
+  package_type: header-library
+  languages: []
+  settings:
+    os: Linux
+    arch: x86_64
+  options:
+  options_definitions:
+  generators: []
+  python_requires: None
+  system_requires:
+  recipe_folder: /home/conan/.conan2/p/libfm48cf0b50f4fca/e
+  source_folder: None
+  build_folder: None
+  generators_folder: None
+  package_folder: None
+  immutable_package_folder: None
+  cpp_info:
+    root:
+      includedirs: ['include']
+      srcdirs: None
+      libdirs: ['lib']
+      resdirs: None
+      bindirs: ['bin']
+      builddirs: None
+      frameworkdirs: None
+      system_libs: None
+      frameworks: None
+      libs: None
+      defines: None
+      cflags: None
+      cxxflags: None
+      sharedlinkflags: None
+      exelinkflags: None
+      objects: None
+      sysroot: None
+      requires: None
+      properties: None
+      exe: None
+      type: None
+      location: None
+      link_location: None
+      languages: None
+  conf_info:
+  label: libfmt/system
+  info:
+  vendor: False
+  dependencies:
+  context: host
+  test: False

@@ -16,7 +16,7 @@ class json_consumerRecipe(ConanFile):
         cmake_layout(self)
 
     def requirements(self):
-        self.requires("libfmt/system", visible=False)
+        self.requires("libfmt/system", visible=True, libs=False, headers=True)
 
     def generate(self):
         deps = CMakeDeps(self)

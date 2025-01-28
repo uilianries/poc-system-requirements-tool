@@ -13,7 +13,7 @@ class formatterConan(ConanFile):
     topics = ("string", "formatter")
     homepage = "https://fmt.dev/"
     license = "MIT"
-    package_type = "shared-library"
+    package_type = "header-library"
     settings = "os", "arch"
 
     def layout(self):
