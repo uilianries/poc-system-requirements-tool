@@ -1,5 +1,5 @@
-#pragma
+#pragma once
 
 namespace consumer {
-    void say_hello();
+    void print_fmt_version();
 }

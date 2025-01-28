@@ -2,6 +2,6 @@
 
 
 int main() {
-    consumer::say_hello();
+    consumer::print_fmt_version();
     return 0;
 }

@@ -4,7 +4,7 @@ from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 
 class json_consumerRecipe(ConanFile):
     name = "fmt-hello"
-    version = "0.1.0"
+    version = "0.3.0"
     package_type = "library"
     settings = "os", "arch", "build_type", "compiler"
     exports_sources = "CMakeLists.txt", "src/*"
@@ -16,7 +16,7 @@ class json_consumerRecipe(ConanFile):
         cmake_layout(self)
 
     def requirements(self):
-        self.requires("libfmt/system")
+        self.requires("libfmt/system", visible=False)
 
     def generate(self):
         deps = CMakeDeps(self)

@@ -20,9 +20,9 @@ popd
 
 
 pushd recipes/fmt-hello/
-conan create ./ --version=0.1.0 $CONAN_CONF_VERBOSE $CONAN_CONF_SYS_PKG
+conan create ./ $CONAN_CONF_VERBOSE $CONAN_CONF_SYS_PKG
 popd
 
 pushd recipes/fmt-app/
-conan create ./ --version=0.1.0 $CONAN_CONF_VERBOSE $CONAN_CONF_SYS_PKG
+conan create ./ $CONAN_CONF_VERBOSE $CONAN_CONF_SYS_PKG
 popd

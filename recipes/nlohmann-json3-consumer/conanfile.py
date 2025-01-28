@@ -13,7 +13,7 @@ class json_consumerRecipe(ConanFile):
         cmake_layout(self)
 
     def requirements(self):
-        self.requires("nlohmann-json3/system")
+        self.requires("nlohmann-json3/system", visible=False)
 
     def generate(self):
         deps = CMakeDeps(self)
