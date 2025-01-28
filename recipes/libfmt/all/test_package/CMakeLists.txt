@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(test_package CXX)
 
-find_package(nlohmann_json REQUIRED CONFIG)
+find_package(fmt REQUIRED CONFIG)
 
 add_executable(${PROJECT_NAME} test_package.cpp)
-target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json)
+target_link_libraries(${PROJECT_NAME} fmt::fmt)

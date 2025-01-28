@@ -1,6 +1,10 @@
 recipes/nlohmann-json3/all/test_package/build/*
+recipes/libfmt/all/test_package/build/*
+recipes/fmt-hello/test_package/build/*
 
 recipes/nlohmann-json3-consumer/test_package/*.sh
+recipes/fmt-hello/test_package/*.sh
+recipes/fmt-app/test_package/*.sh
 
 recipes/nlohmann-json3/*.json
 recipes/nlohmann-json3/all/test_package/CMakeUserPresets.json
@@ -8,3 +12,5 @@ recipes/nlohmann-json3/all/test_package/CMakeUserPresets.json
 hook-out.json
 
 .vscode
+*.log
+*.json

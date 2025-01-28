@@ -3,17 +3,20 @@ from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 
 
 class json_consumerRecipe(ConanFile):
-    name = "json-consumer"
+    name = "fmt-hello"
     version = "0.1.0"
-    package_type = "application"
+    package_type = "library"
     settings = "os", "arch", "build_type", "compiler"
     exports_sources = "CMakeLists.txt", "src/*"
+    options = {"shared": [True, False], "fPIC": [True, False]}
+    default_options = {"shared": False, "fPIC": True}
+    implements = "auto_shared_fpic"
 
     def layout(self):
         cmake_layout(self)
 
     def requirements(self):
-        self.requires("nlohmann-json3/system")
+        self.requires("libfmt/system")
 
     def generate(self):
         deps = CMakeDeps(self)
@@ -29,3 +32,6 @@ class json_consumerRecipe(ConanFile):
     def package(self):
         cmake = CMake(self)
         cmake.install()
+
+    def package_info(self):
+        self.cpp_info.libs = ["fmt_hello"]
