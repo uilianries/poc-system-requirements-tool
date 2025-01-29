@@ -25,3 +25,4 @@ Finally, fmt-app consumes fmt-hello and executes its method
 - [build_private_lib.log](build_private_lib.log): The fmt-hello consumes fmt headers and fmt library to print formatted string. Visibility is private. fmt-app does fail to link/build due missing symbols (expected).
 - [build-consumer-sys-reqs.log](build-consumer-sys-reqs.log): The fmt-hello consumes fmt headers and fmt library to print formatted string. Visibility is public. fmt-app does not fail to link/build.
 - [build-fmt-as-header-only.log](build-fmt-as-header-only.log): The fmt system lib is package type header-library. fmt-hello uses visible=True, libs=False, headers=True. fmt-app does not fail to link/build.
+- [build-fmt-hello-with-sys-req.log](build-fmt-hello-with-sys-req.log): Run package_manager.install() directly build. No package wrapper for fmtlib. Worked, it hides system lib when consuming from fmt-app.
